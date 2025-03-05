@@ -45,5 +45,6 @@ This project was built using **.NET 8** and was created for the backend subject 
    ```sh
    dotnet run
    ```
+![image](https://github.com/user-attachments/assets/0ac09726-a293-4cb5-8957-2257932a40c0)
 
 
