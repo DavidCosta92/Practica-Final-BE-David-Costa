@@ -1,0 +1,14 @@
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\bin\Debug\net8.0\FinalProjectBakary.exe
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\bin\Debug\net8.0\FinalProjectBakary.deps.json
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\bin\Debug\net8.0\FinalProjectBakary.runtimeconfig.json
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\bin\Debug\net8.0\FinalProjectBakary.dll
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\bin\Debug\net8.0\FinalProjectBakary.pdb
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.AssemblyInfoInputs.cache
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.AssemblyInfo.cs
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.csproj.CoreCompileInputs.cache
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.dll
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\refint\FinalProjectBakary.dll
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.pdb
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\FinalProjectBakary.genruntimeconfig.cache
+C:\Users\DavidC\Desktop\Proyectos\Jalasoft\Backend\C#\Learning\Tasks\FinalProjectBakary\obj\Debug\net8.0\ref\FinalProjectBakary.dll
