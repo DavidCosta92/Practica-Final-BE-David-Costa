@@ -1,5 +1,6 @@
 ﻿using FinalProjectBakary.Domain.Common;
 using FinalProjectBakary.Domain.Entities.Breads;
+using FinalProjectBakary.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +11,32 @@ namespace FinalProjectBakary.Domain.Entities
 {
     public class Menu : BaseEntity, IAuditableEntity
     {
-        private List<Bread> _availableBreads = [];
+        private MenuRepository _menuRepository;
+        private BreadRepository _breadRepository;
+        public List<Bread> AvailableBreads = [];
+        public AuditInfo? Audit { get; set; } = new AuditInfo();
 
-        public AuditInfo Audit { get; set; } = new AuditInfo();
-
+        public Menu()
+        {
+            
+        }
+        public Menu(MenuRepository menuRepository, BreadRepository breadRepository)
+        {
+            _menuRepository = menuRepository;
+            _breadRepository = breadRepository;
+        }
         public void AddBread (Bread bread)
         {
-            _availableBreads.Add (bread);
+            AvailableBreads.Add (bread);
         }
 
         public void DeleteBread (Bread bread)
         {
-            _availableBreads.Remove (bread);
+            AvailableBreads.Remove (bread);
         }
         public Bread? GetBreadByName(string breadName)
         {
-            Bread bread = _availableBreads.FirstOrDefault(bread => bread.Name.ToLower().Equals(breadName.ToLower()));
+            Bread bread = _breadRepository.GetByName(breadName).Result;
             if (bread != null)
             {
                 return bread;
@@ -38,7 +49,7 @@ namespace FinalProjectBakary.Domain.Entities
         }
         public List<string> GetAvailableBreadsNames()
         {
-            return _availableBreads.Select(bread => bread.Name).ToList();
+            return AvailableBreads.Select(bread => bread.Name).ToList();
         }
     }
 }

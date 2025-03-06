@@ -11,6 +11,8 @@ namespace FinalProjectBakary.Domain.Entities.Breads
 {
     public class MilkBread : Bread
     {
+        private MilkBread() : base(0, "MilkBread", new AuditInfo(), ImmutableDictionary<Ingredient, double>.Empty, new List<string>()) { }
+
         public MilkBread(double price, AuditInfo audit) : base(price, "MilkBread", audit, SetIngredients(), GetRecipeSteps(SetIngredients()))
         {
         }

@@ -17,7 +17,7 @@ namespace FinalProjectBakary.Domain.Dtos
         public int AvailableCapacity { get; set; }
 
         public Menu Menu { get; set; }
-        public Queue<Order> OrderQueue { get; set; }
+        public List<Order> OrderQueue { get; set; }
         public List<Order> FinishedOrderList { get; set; }
     }
 }

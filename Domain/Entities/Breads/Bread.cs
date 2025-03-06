@@ -15,13 +15,13 @@ namespace FinalProjectBakary.Domain.Entities.Breads
         public string Name { get; set; }
         public ImmutableDictionary<Ingredient, double> Ingredients { get; }
         public IReadOnlyList<string> RecipeSteps { get; }
-        public AuditInfo Audit { get; set; }
+        public AuditInfo? Audit { get; set; } = new AuditInfo() { CreatedAt = DateTime.UtcNow, ModifiedAt = DateTime.UtcNow };
 
         protected Bread(double price,string name, AuditInfo audit, ImmutableDictionary<Ingredient, double> ingredients , IReadOnlyList<string> recipeSteps)
         {
             this.Price = price;
             this.Name = name;
-            this.Audit = Audit;
+            this.Audit = audit ?? new AuditInfo { CreatedAt = DateTime.UtcNow, ModifiedAt = DateTime.UtcNow };
             this.RecipeSteps = recipeSteps;
             this.Ingredients = ingredients; 
         }

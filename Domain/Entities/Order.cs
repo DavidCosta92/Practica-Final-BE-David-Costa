@@ -1,9 +1,11 @@
 ﻿using FinalProjectBakary.Domain.Common;
 using FinalProjectBakary.Domain.Entities.Breads;
 using FinalProjectBakary.Domain.Entities.Enums;
+using FinalProjectBakary.Persistence.Entities;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,57 +14,47 @@ namespace FinalProjectBakary.Domain.Entities
 {
     public class Order : BaseEntity, IAuditableEntity
     {
-        public Dictionary<Bread, int> Breads { get; set; }
-        public AuditInfo Audit { get; set; } = new AuditInfo();
+        public List<OrderBread> OrderBreads { get; set; } = new List<OrderBread>();
+        public AuditInfo? Audit { get; set; } = new AuditInfo();        
+        public string Status {  get; set; } = string.Empty;
 
         public Order()
         {
-            Breads = new Dictionary<Bread, int>();
         }
         public void Add(Bread bread, int quantity)
         {
-            Breads.Add(bread, quantity);
-        }
-        public void DeleteProduct(Bread bread)
-        {
-            Breads.Remove(bread);
+            OrderBreads.Add(new OrderBread { BreadId = bread.Id, Bread = bread, Quantity = quantity });
+
         }
         public void PrepareOrder()
         {
             Console.WriteLine("In the kitchen..");
-            foreach (KeyValuePair<Bread, int> product in Breads)
+            foreach (OrderBread product in OrderBreads)
             {
-                Console.WriteLine($"Preparing {product.Value} units of {product.Key.Name} .....");
-                foreach (string recipeStep in product.Key.CalculateSteps(product.Value))
+                Console.WriteLine($"Preparing {product.Quantity} units of {product.Bread.Name} .....");
+                foreach (string recipeStep in product.Bread.CalculateSteps(product.Quantity))
                 {
                     Console.WriteLine(recipeStep);
                 }
                 Console.WriteLine("----------------------------------------------------------------------------");
-                Console.WriteLine($"... {product.Value} units of {product.Key.Name} where prepared!");
+                Console.WriteLine($"... {product.Quantity} units of {product.Bread.Name} where prepared!");
                 Console.WriteLine("----------------------------------------------------------------------------");
             }
         }
-        public void UpdateProductQuantity(Bread breadName, int units)
-        {
-            // validate equals, this shoudlnt work
-            Breads.TryGetValue(breadName, out int breadQy);
-            // validate value before set
-            breadQy = units;
-        }
         public int CalculateTotalQuantity()
         {   int total = 0;
-            foreach (KeyValuePair<Bread, int> bread in Breads)
+            foreach (OrderBread product in OrderBreads)
             {
-                total += bread.Value;
+                total += product.Quantity;
             }
             return total;
         }
         public double CalculateTotalCost()
         {
             double cost = 0;
-            foreach (KeyValuePair<Bread, int> bread in Breads)
+            foreach (OrderBread product in OrderBreads)
             {                
-                cost += bread.Key.Price * bread.Value;
+                cost += product.Bread.Price * product.Quantity;
             }
             return cost;
         }

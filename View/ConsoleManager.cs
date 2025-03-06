@@ -4,6 +4,8 @@ using FinalProjectBakary.Domain.Dtos;
 using FinalProjectBakary.Domain.Entities;
 using FinalProjectBakary.Domain.Entities.Breads;
 using FinalProjectBakary.Domain.Entities.Enums;
+using FinalProjectBakary.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,37 +20,15 @@ namespace FinalProjectBakary.View
 {
     public class ConsoleManager
     {
-        private OfficeManager _officeManager = new OfficeManager();
-
+        private OfficeManager _officeManager ;
+        public ConsoleManager(OfficeManager officeManager)
+        {
+            _officeManager = officeManager;
+        }
         public void Init()
         {
-            CreateMockData();
+            _officeManager.CreateMockData();
             MainMenu();
-        }
-
-        public void CreateMockData()
-        {
-            AuditInfo audit = new AuditInfo();
-            Bread baguette = new Baguette(2.0, audit);
-            Bread white = new WhiteBread(2.5, audit);
-            Bread milk = new MilkBread(1.5, audit);
-            Bread ham = new HamburgerBun(1.0, audit);
-
-            // Main office
-            Menu mainMenu = new Menu();
-            mainMenu.AddBread(baguette);
-            mainMenu.AddBread(white);
-            mainMenu.AddBread(milk);
-            Office mainOffice = new Office("Main office", 150, mainMenu);
-            _officeManager.CreateOffice(mainOffice);
-
-            // Second office
-            Menu secondMenu = new Menu();
-            secondMenu.AddBread(baguette);
-            secondMenu.AddBread(white);
-            secondMenu.AddBread(ham);
-            Office secondOffice = new Office("Secondary office", 100, secondMenu);
-            _officeManager.CreateOffice(secondOffice);
         }
 
         // Menus
@@ -206,7 +186,7 @@ namespace FinalProjectBakary.View
                 office.ShowCompleteListDetails();
             }
             Console.WriteLine(" ************** TOTALS **************");
-            (int totalOrders, double totalEarnings) = _officeManager.CalculateTotals();
+            (int totalOrders, double totalEarnings) = _officeManager.CalculateTotals().Result;
             Console.WriteLine($"There was a total of {totalOrders} orders with an earned money of ${totalEarnings} us");
             Console.WriteLine();
         }
@@ -329,7 +309,7 @@ namespace FinalProjectBakary.View
             Console.WriteLine("-- Lets create a office --");
             string name = MenuGetANameForANewOffice();
             int maxCapacity = MenuGetAMaximumCapacity();
-            Office officeCreated = _officeManager.CreateEmptyOffice(name, maxCapacity);
+            Office officeCreated = _officeManager.CreateEmptyOffice(name, maxCapacity).Result;
 
             if (officeCreated != null)
             {

@@ -1,6 +1,7 @@
 ﻿using FinalProjectBakary.Domain.Dtos;
 using FinalProjectBakary.Domain.Entities;
 using FinalProjectBakary.Domain.Entities.Breads;
+using FinalProjectBakary.Persistence.Entities;
 
 namespace FinalProjectBakary.Application.Mappers
 {
@@ -49,9 +50,9 @@ namespace FinalProjectBakary.Application.Mappers
                 foreach (Order order in orders)
                 {
                     Console.WriteLine($"-- Order: {order.Id} - Created at: {order.Audit.CreatedAt}");
-                    foreach (KeyValuePair<Bread, int> product in order.Breads)
+                    foreach (OrderBread product in order.OrderBreads)
                     {
-                        Console.WriteLine($"----Bread: {product.Key.Name} - Qy: {product.Value}");
+                        Console.WriteLine($"----Bread: {product.Bread.Name} - Qy: {product.Quantity}");
                     }
                     Console.WriteLine($"----------------------------------------------------------");
                 }

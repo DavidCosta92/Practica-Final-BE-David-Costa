@@ -1,6 +1,8 @@
 ﻿using FinalProjectBakary.Domain.Common;
 using FinalProjectBakary.Domain.Dtos;
 using FinalProjectBakary.Domain.Entities.Breads;
+using FinalProjectBakary.Persistence.Entities;
+using FinalProjectBakary.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,39 +14,43 @@ namespace FinalProjectBakary.Domain.Entities
 {
     public class Office : BaseEntity, IAuditableEntity
     {
-        public AuditInfo Audit { get; set; } = new AuditInfo();
+        private OrderRepository _orderRepository;
+        public AuditInfo? Audit { get; set; } = new AuditInfo();
 
         public string Name { get; set; }
         public int MaximumCapacity { get; set; }
+        public int? MenuId { get; set; }
+
         public Menu? Menu { get; set; }
-        public Queue<Order> OrderQueue { get; set; }
         public int reservedUnits { get; private set; } = 0; // 
         public List<Order> FinishedOrderList { get; set; }
 
+        private Office(OrderRepository orderRepository)
+        {
+            _orderRepository = orderRepository;
+        }
         public Office(string name, int capacity, Menu? menu = null)
         {
             Name = name;
             MaximumCapacity = capacity;
-            Menu = menu?? new Menu();
-            OrderQueue = new Queue<Order>();
-            FinishedOrderList = new List<Order>();
+            Menu = menu?? new Menu();  
         }
-        public bool CreateNewOrder(Dictionary<string, int> breadsToAdd)
+        public async Task<bool> CreateNewOrder(Dictionary<string, int> breadsToAdd)
         {
             try
             {
-                Dictionary<Bread, int> breads = new Dictionary<Bread, int>();
-
+                List<OrderBread> OrderBreads = new List<OrderBread>(); 
                 foreach (KeyValuePair<string, int> bread in breadsToAdd)
                 {
                     Bread breadToAdd = Menu.GetBreadByName(bread.Key);
                     if (breadToAdd != null)
                     {
-                        breads.Add(breadToAdd, bread.Value);
+                        OrderBread orderBread = new OrderBread() { Bread = breadToAdd, Quantity = bread.Value };
+                        OrderBreads.Add(orderBread);
                     }
                 }
-                Order order = new Order() { Breads = breads, Audit = new AuditInfo() };
-                OrderQueue.Enqueue(order);
+                Order order = new Order() { OrderBreads = OrderBreads,Status = "Pending", Audit = new AuditInfo() };
+                await _orderRepository.AddAsync(order); 
                 return true;
             }
             catch (Exception ex)
@@ -54,15 +60,16 @@ namespace FinalProjectBakary.Domain.Entities
             }
         }
 
-        public void PrepareAllOrders()
+        public async void PrepareAllOrders()
         {
+            List<Order> orders = _orderRepository.GetAllPendingAsync().Result.ToList();
             Console.WriteLine("Preparing all orders!");
-            while (OrderQueue.Count > 0)
+            foreach (Order order in orders)
             {
-                Order preparedOrder = OrderQueue.Dequeue();
-                preparedOrder.PrepareOrder();
-                FinishedOrderList.Add(preparedOrder);
+                order.PrepareOrder();
+                order.Status = "Finished";
             }
+            await _orderRepository.SaveContextChanges();
         }
         
         public OfficeResume GetOfficeTotalResume()
@@ -70,6 +77,7 @@ namespace FinalProjectBakary.Domain.Entities
             double earnings = 0;
             int units = 0;
 
+            List<Order> orders = _orderRepository.GetAllFinishedAsync().Result.ToList();
             FinishedOrderList.ForEach(order =>
             {
                 earnings += order.CalculateTotalCost();

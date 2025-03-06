@@ -9,6 +9,8 @@ namespace FinalProjectBakary.Domain.Entities.Breads
         public Baguette(double price ,  AuditInfo audit) :base(price, "Baguette", audit, SetIngredients(), GetRecipeSteps(SetIngredients()))
         {
         }
+        private Baguette() : base(0, "Baguette", new AuditInfo(), ImmutableDictionary<Ingredient, double>.Empty, new List<string>()) { }
+
         public static ImmutableDictionary<Ingredient, double> SetIngredients(int quantity = 1)
         {
             return ImmutableDictionary.CreateRange(new[]

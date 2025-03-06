@@ -6,6 +6,7 @@ namespace FinalProjectBakary.Domain.Entities.Breads
 {
     public class HamburgerBun : Bread
     {
+        private HamburgerBun() : base(0, "HamburgerBun", new AuditInfo(), ImmutableDictionary<Ingredient, double>.Empty, new List<string>()) { }
 
         public HamburgerBun(double price, AuditInfo audit) : base(price, "HamburgerBun", audit, SetIngredients(), GetRecipeSteps(SetIngredients()))
         {

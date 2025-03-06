@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\domain\\entities\\officemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:domain\\entities\\officemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\domain\\entities\\office.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:domain\\entities\\office.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\view\\consolemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:view\\consolemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\persistence\\entities\\orderbread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:persistence\\entities\\orderbread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\persistence\\repositories\\officerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:persistence\\repositories\\officerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|c:\\users\\davidc\\desktop\\proyectos\\jalasoft\\backend\\c#\\learning\\tasks\\finalprojectbakary\\domain\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756F9C8D-33ED-4BA7-A50B-E451E2E8FA66}|FinalProjectBakary.csproj|solutionrelative:domain\\entities\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,52 +33,91 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 140,
+          "DockedWidth": 512,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T18:18:45.786Z",
+              "WhenOpened": "2025-03-06T00:02:58.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderBread.cs",
+              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Persistence\\Entities\\OrderBread.cs",
+              "RelativeDocumentMoniker": "Persistence\\Entities\\OrderBread.cs",
+              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Persistence\\Entities\\OrderBread.cs",
+              "RelativeToolTip": "Persistence\\Entities\\OrderBread.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T02:27:05.455Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 576,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 458,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConsoleManager.cs",
-              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\View\\ConsoleManager.cs",
-              "RelativeDocumentMoniker": "View\\ConsoleManager.cs",
-              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\View\\ConsoleManager.cs*",
-              "RelativeToolTip": "View\\ConsoleManager.cs*",
-              "ViewState": "AgIAAOEBAAAAAAAAAAAEwN4BAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Office.cs",
+              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\Office.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Office.cs",
+              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\Office.cs",
+              "RelativeToolTip": "Domain\\Entities\\Office.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA8wDkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T22:40:19.904Z",
+              "WhenOpened": "2025-03-05T23:50:55.429Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OfficeManager.cs",
-              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\OfficeManager.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\OfficeManager.cs",
-              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\OfficeManager.cs",
-              "RelativeToolTip": "Domain\\Entities\\OfficeManager.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwA8AAAAyAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "OfficeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Persistence\\Repositories\\OfficeRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\Repositories\\OfficeRepository.cs",
+              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Persistence\\Repositories\\OfficeRepository.cs",
+              "RelativeToolTip": "Persistence\\Repositories\\OfficeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T18:29:35.466Z",
+              "WhenOpened": "2025-03-06T01:49:58.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T23:51:57.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\Menu.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Menu.cs",
+              "ToolTip": "C:\\Users\\DavidC\\Desktop\\Proyectos\\Jalasoft\\Backend\\C#\\Learning\\Tasks\\FinalProjectBakary\\Domain\\Entities\\Menu.cs",
+              "RelativeToolTip": "Domain\\Entities\\Menu.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T00:14:42.496Z",
               "EditorCaption": ""
             }
           ]
